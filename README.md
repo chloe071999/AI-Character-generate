@@ -1,10 +1,10 @@
-# Degen Scraper
+# 提取推特/文章内容并生成角色
 
 Pipeline for generating AI character files and training datasets by scraping public figures' online presence across Twitter and blogs.
 
 > ⚠️ **IMPORTANT**: Create a new Twitter account for this tool. DO NOT use your main account as it may trigger Twitter's automation detection and result in account restrictions.
 
-## Setup
+## 设置
 
 1. Install dependencies:
    ```bash
@@ -28,45 +28,21 @@ Pipeline for generating AI character files and training datasets by scraping pub
    MAX_DELAY=           # maximum delay between requests
    ```
 
-## Usage
+## 使用设置
 
-### Twitter Collection
+### 提取推特内容
 ```bash
-npm run twitter -- username
+npm run twitter -- username 
 ```
-Example: `npm run twitter -- pmarca`
+Example: `npm run twitter -- DePIN_News`
 
-### Blog Collection
+### 提取博客内容
 ```bash
 npm run blog
 ```
 
-### Generate Character
+### 生成角色
 ```bash
-npm run character -- username
+npm run character -- username date
 ```
-Example: `npm run character -- pmarca`
-
-### Finetune
-```bash
-npm run finetune
-```
-
-### Finetune (with test)
-```bash
-npm run finetune:test
-```
-
-### Generate Virtuals Character Card
-https://whitepaper.virtuals.io/developer-documents/agent-contribution/contribute-to-cognitive-core#character-card-and-goal-samples
-
-Run this after Twitter Collection step 
-```bash
-npm run generate-virtuals -- username date 
-```
-
-Example: `npm run generate-virtuals -- pmarca 2024-11-29`
-Example without date: `npm run generate-virtuals -- pmarca`
-
-The generated character file will be in the `pipeline/[username]/[date]/character/character.json` directory.
-The generated tweet dataset file will be in `pipeline/[username]/[date]/raw/tweets.json`.
+Example: `npm run character -- DePIN_News 2025-03-05`
