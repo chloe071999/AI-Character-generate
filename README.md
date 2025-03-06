@@ -14,18 +14,20 @@ Pipeline for generating AI character files and training datasets by scraping pub
 2. Copy the `.env.example` into a `.env` file:
    ```properties
    # (Required) Twitter Authentication
-   TWITTER_USERNAME=     # your twitter username
-   TWITTER_PASSWORD=     # your twitter password
+   TWITTER_USERNAME="WatchX_bot" # your twitter username
+   TWITTER_PASSWORD="watchxnetwork" # your twitter password
+   TWITTER_EMAIL="chloe@wahtchx.network" # your twitter email
 
-   # (Optional) Blog Configuration
-   BLOG_URLS_FILE=      # path to file containing blog URLs
+   BLOG_URLS_FILE=./blogList.txt # path to file containing blog URLs
 
    # (Optional) Scraping Configuration
-   MAX_TWEETS=          # max tweets to scrape
-   MAX_RETRIES=         # max retries for scraping
-   RETRY_DELAY=         # delay between retries
-   MIN_DELAY=           # minimum delay between requests
-   MAX_DELAY=           # maximum delay between requests
+   MAX_TWEETS=10 # max tweets to scrape
+   MAX_RETRIES=2 # max retries for scraping
+   RETRY_DELAY=60 # delay between retries
+   MIN_DELAY=10 # minimum delay between requests
+   MAX_DELAY=60 # maximum delay between requests
+
+
    ```
 
 ## 使用设置
